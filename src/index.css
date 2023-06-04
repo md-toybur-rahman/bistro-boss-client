@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.drawer-side a.active{
+    background-color: rgb(194, 194, 194);
+    color: black;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.drawer-side a{
+    color: black;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
