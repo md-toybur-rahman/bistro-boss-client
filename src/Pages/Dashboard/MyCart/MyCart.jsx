@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useCart from "../../../Hooks/useCart";
 import useHelmet from "../../../Hooks/useHelmet";
 import { FaTrashAlt } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 
 
@@ -42,10 +43,10 @@ const MyCart = () => {
     return (
         <div className="w-full">
             {useHelmet("My Cart")}
-            <div className="uppercase font-semibold h-10 justify-evenly">
-                <h1 className="text-3xl">My Cart:  {cart.length}</h1>
-                <h1 className="text-3xl">My Cart:  {total}</h1>
-                <button className="btn btn-warning btn-sm">PAY</button>
+            <div className="uppercase font-semibold h-10 flex justify-evenly my-5">
+                <h1 className="text-3xl">Total Items:  {cart.length}</h1>
+                <h1 className="text-3xl">Total Price:  {total}</h1>
+                <Link to="/dashboard/payment"><button className="btn btn-warning btn-sm">PAY</button></Link>
             </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
